@@ -1,0 +1,1873 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>URL Encode Online Tool - W3tools</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content=" ❤URL encoding, is a method to encode arbitrary data in a Uniform Resource Identifier (URI) using only the limited US-ASCII." name="description">
+    <link href="../../static/image/favicon.ico" rel="icon">
+    <link href="../../static/css/css.css" rel="stylesheet">
+    <link href="../../static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../static/css/all.min.css" rel="stylesheet">
+    <link href="../../static/css/style.css" rel="stylesheet">
+  </head>
+  
+  <body>
+    <header id="header" class="header-scrolled">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <a href="#" class="twitter">
+              <i class="fa fa-twitter">
+              </i>
+            </a>
+            <a href="#" class="facebook">
+              <i class="fa fa-facebook">
+              </i>
+            </a>
+            <a href="#" class="linkedin">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+            <a href="#" class="instagram">
+              <i class="fa fa-instagram">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light main-nav bg-white">
+          <a href="index.html" class="scrollto">
+            W3tools
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="css-minify.html">CSS minify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="string-to-binary-converter.html">String to Binary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="json-formatter-beautifier.html">JSON Beautify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="word-count.html">Word Count</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favicon-generator.html">Favicon Generator</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- #header -->
+    <div class="container p-l-30 p-r-30">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h1 class="tool-title">URL encode</h1>
+        </div>
+      </div>
+      <main id="main">
+        <div class="row editor-container">
+          <div class="col-md-5">
+            <div style="min-height:320px">
+              <ul class="nav nav-tabs" role="tablist">
+                <li class="nav-item">
+                  <a class="nav-link active" data-toggle="tab" href="#home">Enter Data</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu1">Choose File</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" data-toggle="tab" href="#menu2">Enter Url</a>
+                </li>
+              </ul>
+              <!-- Tab panes -->
+              <div class="tab-content">
+                <div id="home" class="container tab-pane active">
+                  <br>
+                  <div class="editor-position" id="editor1">
+                  </div>
+                </div>
+                <div id="menu1" class="container tab-pane fade">
+                  <br>
+                  <div class="row">
+                    <div class="col-sm-12" id="err" style="color:red;">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="file" id="css" name="cssfile" accept="application/css" onchange="onFileSelected(event)" class="form-control">
+                    </div>
+                    <div class="col-sm-6">
+                      <input type="submit" id="convert" name="upload" value="Load File" class="btn btn-info">
+                    </div>
+                  </div>
+                </div>
+                <div id="menu2" class="container tab-pane fade">
+                  <br>
+                  <input type="text" name="url" class="form-control" placeholder="Enter URL">
+                  <br>
+                  <input type="submit" name="submit" value="Load URL" class="btn btn-info">
+                  <textarea id="json" style="display:none;">
+                  </textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2 text-center">
+            <button class="btn btn-primary tool-action-btn" id="copy">
+              <i class="fas fa-copy">
+              </i>Copy</button>
+            <button class="btn btn-primary tool-action-btn" id="download1">
+              <i class="fas fa-download">
+              </i>Download</button>
+          </div>
+          <div class="col-md-5">
+            <div style="min-height:320px">
+              <div class="code editor-position" id="editor2">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row tool-content-box">
+          <div class="col-md-8">
+            <h2>What is URL encoding?</h2>
+            <p>The term URL encoding is a bit inexact because the encoding procedure is not limited to URLs (Uniform Resource Locators), but can also be applied to any other URIs (Uniform Resource Identifiers) such as URNs (Uniform Resource Names). Therefore, the term percent-encoding should be preferred.</p>
+            <p>URL encoding stands for encoding certain characters in a URL by replacing them with one or more character triplets that consist of the percent character "%" followed by two hexadecimal digits. The two hexadecimal digits of the triplet(s) represent the numeric value of the replaced character.</p>
+            <br>
+            <h3>When and why would you use URL encoding?</h3>
+            <p>When sent in an HTTP GET request, application/x-www-form-urlencoded data is included in the query component of the request URI. When sent in an HTTP POST request or via email, the data is placed in the body of the message, and the name of the media type is included in the message's Content-Type header.</p>
+            <p>When data that has been entered into HTML forms is submitted, the form field names and values are encoded and sent to the server in an HTTP request message using method GET or POST, or, historically, via email. The encoding used by default is based on a very early version of the general URI percent-encoding rules, with a number of modifications such as newline normalization and replacing spaces with "+" instead of "%20".
+              <br>The MIME type of data encoded this way is application/x-www-form-urlencoded, and it is currently defined (still in a very outdated manner) in the HTML and XForms specifications. In addition, the CGI specification contains rules for how web servers decode data of this type and make it available to applications.</p>
+            <br>
+            <h3>ASCII Control Characters Encoding</h3>
+            <table style="text-align:center" class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th class="ts">Decimal</th>
+                  <th class="ts">Hex Value</th>
+                  <th class="ts">Character</th>
+                  <th class="ts">URL Encode</th>
+                </tr>
+                <tr>
+                  <td>0</td>
+                  <td>00</td>
+                  <td>&nbsp;</td>
+                  <td>%00</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>01</td>
+                  <td>&nbsp;</td>
+                  <td>%01</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>02</td>
+                  <td>&nbsp;</td>
+                  <td>%02</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>03</td>
+                  <td>&nbsp;</td>
+                  <td>%03</td>
+                </tr>
+                <tr>
+                  <td>4</td>
+                  <td>04</td>
+                  <td>&nbsp;</td>
+                  <td>%04</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>05</td>
+                  <td>&nbsp;</td>
+                  <td>%05</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>06</td>
+                  <td>&nbsp;</td>
+                  <td>%06</td>
+                </tr>
+                <tr>
+                  <td>7</td>
+                  <td>07</td>
+                  <td>&nbsp;</td>
+                  <td>%07</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>08</td>
+                  <td>backspace</td>
+                  <td>%08</td>
+                </tr>
+                <tr>
+                  <td>9</td>
+                  <td>09</td>
+                  <td>tab</td>
+                  <td>%09</td>
+                </tr>
+                <tr>
+                  <td>10</td>
+                  <td>0a</td>
+                  <td>linefeed</td>
+                  <td>%0a</td>
+                </tr>
+                <tr>
+                  <td>11</td>
+                  <td>0b</td>
+                  <td>&nbsp;</td>
+                  <td>%0b</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>0c</td>
+                  <td>&nbsp;</td>
+                  <td>%0c</td>
+                </tr>
+                <tr>
+                  <td>13</td>
+                  <td>0d</td>
+                  <td>carriage return</td>
+                  <td>%0d</td>
+                </tr>
+                <tr>
+                  <td>14</td>
+                  <td>0e</td>
+                  <td>&nbsp;</td>
+                  <td>%0e</td>
+                </tr>
+                <tr>
+                  <td>15</td>
+                  <td>0f</td>
+                  <td>&nbsp;</td>
+                  <td>%0f</td>
+                </tr>
+                <tr>
+                  <td>16</td>
+                  <td>10</td>
+                  <td>&nbsp;</td>
+                  <td>%10</td>
+                </tr>
+                <tr>
+                  <td>17</td>
+                  <td>11</td>
+                  <td>&nbsp;</td>
+                  <td>%11</td>
+                </tr>
+                <tr>
+                  <td>18</td>
+                  <td>12</td>
+                  <td>&nbsp;</td>
+                  <td>%12</td>
+                </tr>
+                <tr>
+                  <td>19</td>
+                  <td>13</td>
+                  <td>&nbsp;</td>
+                  <td>%13</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>14</td>
+                  <td>&nbsp;</td>
+                  <td>%14</td>
+                </tr>
+                <tr>
+                  <td>21</td>
+                  <td>15</td>
+                  <td>&nbsp;</td>
+                  <td>%15</td>
+                </tr>
+                <tr>
+                  <td>22</td>
+                  <td>16</td>
+                  <td>&nbsp;</td>
+                  <td>%16</td>
+                </tr>
+                <tr>
+                  <td>23</td>
+                  <td>17</td>
+                  <td>&nbsp;</td>
+                  <td>%17</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>18</td>
+                  <td>&nbsp;</td>
+                  <td>%18</td>
+                </tr>
+                <tr>
+                  <td>25</td>
+                  <td>19</td>
+                  <td>&nbsp;</td>
+                  <td>%19</td>
+                </tr>
+                <tr>
+                  <td>26</td>
+                  <td>1a</td>
+                  <td>&nbsp;</td>
+                  <td>%1a</td>
+                </tr>
+                <tr>
+                  <td>27</td>
+                  <td>1b</td>
+                  <td>&nbsp;</td>
+                  <td>%1b</td>
+                </tr>
+                <tr>
+                  <td>28</td>
+                  <td>1c</td>
+                  <td>&nbsp;</td>
+                  <td>%1c</td>
+                </tr>
+                <tr>
+                  <td>29</td>
+                  <td>1d</td>
+                  <td>&nbsp;</td>
+                  <td>%1d</td>
+                </tr>
+                <tr>
+                  <td>30</td>
+                  <td>1e</td>
+                  <td>&nbsp;</td>
+                  <td>%1e</td>
+                </tr>
+                <tr>
+                  <td>31</td>
+                  <td>1f</td>
+                  <td>&nbsp;</td>
+                  <td>%1f</td>
+                </tr>
+                <tr>
+                  <td>127</td>
+                  <td>7f</td>
+                  <td>&nbsp;</td>
+                  <td>%7f</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h3>Non-ASCII control characters encoding</h3>
+            <table style="text-align:center" class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th class="ts">Decimal</th>
+                  <th class="ts">Hex Value</th>
+                  <th class="ts">Character</th>
+                  <th class="ts">URL Encode</th>
+                </tr>
+                <tr>
+                  <td>128</td>
+                  <td>80</td>
+                  <td>€</td>
+                  <td>%80</td>
+                </tr>
+                <tr>
+                  <td>129</td>
+                  <td>81</td>
+                  <td></td>
+                  <td>%81</td>
+                </tr>
+                <tr>
+                  <td>130</td>
+                  <td>82</td>
+                  <td>‚</td>
+                  <td>%82</td>
+                </tr>
+                <tr>
+                  <td>131</td>
+                  <td>83</td>
+                  <td>ƒ</td>
+                  <td>%83</td>
+                </tr>
+                <tr>
+                  <td>132</td>
+                  <td>84</td>
+                  <td>„</td>
+                  <td>%84</td>
+                </tr>
+                <tr>
+                  <td>133</td>
+                  <td>85</td>
+                  <td>…</td>
+                  <td>%85</td>
+                </tr>
+                <tr>
+                  <td>134</td>
+                  <td>86</td>
+                  <td>†</td>
+                  <td>%86</td>
+                </tr>
+                <tr>
+                  <td>135</td>
+                  <td>87</td>
+                  <td>‡</td>
+                  <td>%87</td>
+                </tr>
+                <tr>
+                  <td>136</td>
+                  <td>88</td>
+                  <td>ˆ</td>
+                  <td>%88</td>
+                </tr>
+                <tr>
+                  <td>137</td>
+                  <td>89</td>
+                  <td>‰</td>
+                  <td>%89</td>
+                </tr>
+                <tr>
+                  <td>138</td>
+                  <td>8a</td>
+                  <td>Š</td>
+                  <td>%8a</td>
+                </tr>
+                <tr>
+                  <td>139</td>
+                  <td>8b</td>
+                  <td>‹</td>
+                  <td>%8b</td>
+                </tr>
+                <tr>
+                  <td>140</td>
+                  <td>8c</td>
+                  <td>Œ</td>
+                  <td>%8c</td>
+                </tr>
+                <tr>
+                  <td>141</td>
+                  <td>8d</td>
+                  <td></td>
+                  <td>%8d</td>
+                </tr>
+                <tr>
+                  <td>142</td>
+                  <td>8e</td>
+                  <td>Ž</td>
+                  <td>%8e</td>
+                </tr>
+                <tr>
+                  <td>143</td>
+                  <td>8f</td>
+                  <td></td>
+                  <td>%8f</td>
+                </tr>
+                <tr>
+                  <td>144</td>
+                  <td>90</td>
+                  <td></td>
+                  <td>%90</td>
+                </tr>
+                <tr>
+                  <td>145</td>
+                  <td>91</td>
+                  <td>‘</td>
+                  <td>%91</td>
+                </tr>
+                <tr>
+                  <td>146</td>
+                  <td>92</td>
+                  <td>’</td>
+                  <td>%92</td>
+                </tr>
+                <tr>
+                  <td>147</td>
+                  <td>93</td>
+                  <td>“</td>
+                  <td>%93</td>
+                </tr>
+                <tr>
+                  <td>148</td>
+                  <td>94</td>
+                  <td>”</td>
+                  <td>%94</td>
+                </tr>
+                <tr>
+                  <td>149</td>
+                  <td>95</td>
+                  <td>•</td>
+                  <td>%95</td>
+                </tr>
+                <tr>
+                  <td>150</td>
+                  <td>96</td>
+                  <td>–</td>
+                  <td>%96</td>
+                </tr>
+                <tr>
+                  <td>151</td>
+                  <td>97</td>
+                  <td>—</td>
+                  <td>%97</td>
+                </tr>
+                <tr>
+                  <td>152</td>
+                  <td>98</td>
+                  <td>˜</td>
+                  <td>%98</td>
+                </tr>
+                <tr>
+                  <td>153</td>
+                  <td>99</td>
+                  <td>™</td>
+                  <td>%99</td>
+                </tr>
+                <tr>
+                  <td>154</td>
+                  <td>9a</td>
+                  <td>š</td>
+                  <td>%9a</td>
+                </tr>
+                <tr>
+                  <td>155</td>
+                  <td>9b</td>
+                  <td>›</td>
+                  <td>%9b</td>
+                </tr>
+                <tr>
+                  <td>156</td>
+                  <td>9c</td>
+                  <td>œ</td>
+                  <td>%9c</td>
+                </tr>
+                <tr>
+                  <td>157</td>
+                  <td>9d</td>
+                  <td></td>
+                  <td>%9d</td>
+                </tr>
+                <tr>
+                  <td>158</td>
+                  <td>9e</td>
+                  <td>ž</td>
+                  <td>%9e</td>
+                </tr>
+                <tr>
+                  <td>159</td>
+                  <td>9f</td>
+                  <td>Ÿ</td>
+                  <td>%9f</td>
+                </tr>
+                <tr>
+                  <td>160</td>
+                  <td>a0</td>
+                  <td>&nbsp;</td>
+                  <td>%a0</td>
+                </tr>
+                <tr>
+                  <td>161</td>
+                  <td>a1</td>
+                  <td>¡</td>
+                  <td>%a1</td>
+                </tr>
+                <tr>
+                  <td>162</td>
+                  <td>a2</td>
+                  <td>¢</td>
+                  <td>%a2</td>
+                </tr>
+                <tr>
+                  <td>163</td>
+                  <td>a3</td>
+                  <td>£</td>
+                  <td>%a3</td>
+                </tr>
+                <tr>
+                  <td>164</td>
+                  <td>a4</td>
+                  <td>¤</td>
+                  <td>%a4</td>
+                </tr>
+                <tr>
+                  <td>165</td>
+                  <td>a5</td>
+                  <td>¥</td>
+                  <td>%a5</td>
+                </tr>
+                <tr>
+                  <td>166</td>
+                  <td>a6</td>
+                  <td>¦</td>
+                  <td>%a6</td>
+                </tr>
+                <tr>
+                  <td>167</td>
+                  <td>a7</td>
+                  <td>§</td>
+                  <td>%a7</td>
+                </tr>
+                <tr>
+                  <td>168</td>
+                  <td>a8</td>
+                  <td>¨</td>
+                  <td>%a8</td>
+                </tr>
+                <tr>
+                  <td>169</td>
+                  <td>a9</td>
+                  <td>©</td>
+                  <td>%a9</td>
+                </tr>
+                <tr>
+                  <td>170</td>
+                  <td>aa</td>
+                  <td>ª</td>
+                  <td>%aa</td>
+                </tr>
+                <tr>
+                  <td>171</td>
+                  <td>ab</td>
+                  <td>«</td>
+                  <td>%ab</td>
+                </tr>
+                <tr>
+                  <td>172</td>
+                  <td>ac</td>
+                  <td>¬</td>
+                  <td>%ac</td>
+                </tr>
+                <tr>
+                  <td>173</td>
+                  <td>ad</td>
+                  <td>&shy;</td>
+                  <td>%ad</td>
+                </tr>
+                <tr>
+                  <td>174</td>
+                  <td>ae</td>
+                  <td>®</td>
+                  <td>%ae</td>
+                </tr>
+                <tr>
+                  <td>175</td>
+                  <td>af</td>
+                  <td>¯</td>
+                  <td>%af</td>
+                </tr>
+                <tr>
+                  <td>176</td>
+                  <td>b0</td>
+                  <td>°</td>
+                  <td>%b0</td>
+                </tr>
+                <tr>
+                  <td>177</td>
+                  <td>b1</td>
+                  <td>±</td>
+                  <td>%b1</td>
+                </tr>
+                <tr>
+                  <td>178</td>
+                  <td>b2</td>
+                  <td>²</td>
+                  <td>%b2</td>
+                </tr>
+                <tr>
+                  <td>179</td>
+                  <td>b3</td>
+                  <td>³</td>
+                  <td>%b3</td>
+                </tr>
+                <tr>
+                  <td>180</td>
+                  <td>b4</td>
+                  <td>´</td>
+                  <td>%b4</td>
+                </tr>
+                <tr>
+                  <td>181</td>
+                  <td>b5</td>
+                  <td>µ</td>
+                  <td>%b5</td>
+                </tr>
+                <tr>
+                  <td>182</td>
+                  <td>b6</td>
+                  <td>¶</td>
+                  <td>%b6</td>
+                </tr>
+                <tr>
+                  <td>183</td>
+                  <td>b7</td>
+                  <td>·</td>
+                  <td>%b7</td>
+                </tr>
+                <tr>
+                  <td>184</td>
+                  <td>b8</td>
+                  <td>¸</td>
+                  <td>%b8</td>
+                </tr>
+                <tr>
+                  <td>185</td>
+                  <td>b9</td>
+                  <td>¹</td>
+                  <td>%b9</td>
+                </tr>
+                <tr>
+                  <td>186</td>
+                  <td>ba</td>
+                  <td>º</td>
+                  <td>%ba</td>
+                </tr>
+                <tr>
+                  <td>187</td>
+                  <td>bb</td>
+                  <td>»</td>
+                  <td>%bb</td>
+                </tr>
+                <tr>
+                  <td>188</td>
+                  <td>bc</td>
+                  <td>¼</td>
+                  <td>%bc</td>
+                </tr>
+                <tr>
+                  <td>189</td>
+                  <td>bd</td>
+                  <td>½</td>
+                  <td>%bd</td>
+                </tr>
+                <tr>
+                  <td>190</td>
+                  <td>be</td>
+                  <td>¾</td>
+                  <td>%be</td>
+                </tr>
+                <tr>
+                  <td>191</td>
+                  <td>bf</td>
+                  <td>¿</td>
+                  <td>%bf</td>
+                </tr>
+                <tr>
+                  <td>192</td>
+                  <td>c0</td>
+                  <td>À</td>
+                  <td>%c0</td>
+                </tr>
+                <tr>
+                  <td>193</td>
+                  <td>c1</td>
+                  <td>Á</td>
+                  <td>%c1</td>
+                </tr>
+                <tr>
+                  <td>194</td>
+                  <td>c2</td>
+                  <td>Â</td>
+                  <td>%c2</td>
+                </tr>
+                <tr>
+                  <td>195</td>
+                  <td>c3</td>
+                  <td>Ã</td>
+                  <td>%c3</td>
+                </tr>
+                <tr>
+                  <td>196</td>
+                  <td>c4</td>
+                  <td>Ä</td>
+                  <td>%c4</td>
+                </tr>
+                <tr>
+                  <td>197</td>
+                  <td>c5</td>
+                  <td>Å</td>
+                  <td>%c5</td>
+                </tr>
+                <tr>
+                  <td>198</td>
+                  <td>c6</td>
+                  <td>Æ</td>
+                  <td>%v6</td>
+                </tr>
+                <tr>
+                  <td>199</td>
+                  <td>c7</td>
+                  <td>Ç</td>
+                  <td>%c7</td>
+                </tr>
+                <tr>
+                  <td>200</td>
+                  <td>c8</td>
+                  <td>È</td>
+                  <td>%c8</td>
+                </tr>
+                <tr>
+                  <td>201</td>
+                  <td>c9</td>
+                  <td>É</td>
+                  <td>%c9</td>
+                </tr>
+                <tr>
+                  <td>202</td>
+                  <td>ca</td>
+                  <td>Ê</td>
+                  <td>%ca</td>
+                </tr>
+                <tr>
+                  <td>203</td>
+                  <td>cb</td>
+                  <td>Ë</td>
+                  <td>%cb</td>
+                </tr>
+                <tr>
+                  <td>204</td>
+                  <td>cc</td>
+                  <td>Ì</td>
+                  <td>%cc</td>
+                </tr>
+                <tr>
+                  <td>205</td>
+                  <td>cd</td>
+                  <td>Í</td>
+                  <td>%cd</td>
+                </tr>
+                <tr>
+                  <td>206</td>
+                  <td>ce</td>
+                  <td>Î</td>
+                  <td>%ce</td>
+                </tr>
+                <tr>
+                  <td>207</td>
+                  <td>cf</td>
+                  <td>Ï</td>
+                  <td>%cf</td>
+                </tr>
+                <tr>
+                  <td>208</td>
+                  <td>d0</td>
+                  <td>Ð</td>
+                  <td>%d0</td>
+                </tr>
+                <tr>
+                  <td>209</td>
+                  <td>d1</td>
+                  <td>Ñ</td>
+                  <td>%d1</td>
+                </tr>
+                <tr>
+                  <td>210</td>
+                  <td>d2</td>
+                  <td>Ò</td>
+                  <td>%d2</td>
+                </tr>
+                <tr>
+                  <td>211</td>
+                  <td>d3</td>
+                  <td>Ó</td>
+                  <td>%d3</td>
+                </tr>
+                <tr>
+                  <td>212</td>
+                  <td>d4</td>
+                  <td>Ô</td>
+                  <td>%d4</td>
+                </tr>
+                <tr>
+                  <td>213</td>
+                  <td>d5</td>
+                  <td>Õ</td>
+                  <td>%d5</td>
+                </tr>
+                <tr>
+                  <td>214</td>
+                  <td>d6</td>
+                  <td>Ö</td>
+                  <td>%d6</td>
+                </tr>
+                <tr>
+                  <td>215</td>
+                  <td>d7</td>
+                  <td>×</td>
+                  <td>%d7</td>
+                </tr>
+                <tr>
+                  <td>216</td>
+                  <td>d8</td>
+                  <td>Ø</td>
+                  <td>%d8</td>
+                </tr>
+                <tr>
+                  <td>217</td>
+                  <td>d9</td>
+                  <td>Ù</td>
+                  <td>%d9</td>
+                </tr>
+                <tr>
+                  <td>218</td>
+                  <td>da</td>
+                  <td>Ú</td>
+                  <td>%da</td>
+                </tr>
+                <tr>
+                  <td>219</td>
+                  <td>db</td>
+                  <td>Û</td>
+                  <td>%db</td>
+                </tr>
+                <tr>
+                  <td>220</td>
+                  <td>dc</td>
+                  <td>Ü</td>
+                  <td>%dc</td>
+                </tr>
+                <tr>
+                  <td>221</td>
+                  <td>dd</td>
+                  <td>Ý</td>
+                  <td>%dd</td>
+                </tr>
+                <tr>
+                  <td>222</td>
+                  <td>de</td>
+                  <td>Þ</td>
+                  <td>%de</td>
+                </tr>
+                <tr>
+                  <td>223</td>
+                  <td>df</td>
+                  <td>ß</td>
+                  <td>%df</td>
+                </tr>
+                <tr>
+                  <td>224</td>
+                  <td>e0</td>
+                  <td>à</td>
+                  <td>%e0</td>
+                </tr>
+                <tr>
+                  <td>225</td>
+                  <td>e1</td>
+                  <td>á</td>
+                  <td>%e1</td>
+                </tr>
+                <tr>
+                  <td>226</td>
+                  <td>e2</td>
+                  <td>â</td>
+                  <td>%e2</td>
+                </tr>
+                <tr>
+                  <td>227</td>
+                  <td>e3</td>
+                  <td>ã</td>
+                  <td>%e3</td>
+                </tr>
+                <tr>
+                  <td>228</td>
+                  <td>e4</td>
+                  <td>ä</td>
+                  <td>%e4</td>
+                </tr>
+                <tr>
+                  <td>229</td>
+                  <td>e5</td>
+                  <td>å</td>
+                  <td>%e5</td>
+                </tr>
+                <tr>
+                  <td>230</td>
+                  <td>e6</td>
+                  <td>æ</td>
+                  <td>%e6</td>
+                </tr>
+                <tr>
+                  <td>231</td>
+                  <td>e7</td>
+                  <td>ç</td>
+                  <td>%e7</td>
+                </tr>
+                <tr>
+                  <td>232</td>
+                  <td>e8</td>
+                  <td>è</td>
+                  <td>%e8</td>
+                </tr>
+                <tr>
+                  <td>233</td>
+                  <td>e9</td>
+                  <td>é</td>
+                  <td>%e9</td>
+                </tr>
+                <tr>
+                  <td>234</td>
+                  <td>ea</td>
+                  <td>ê</td>
+                  <td>%ea</td>
+                </tr>
+                <tr>
+                  <td>235</td>
+                  <td>eb</td>
+                  <td>ë</td>
+                  <td>%eb</td>
+                </tr>
+                <tr>
+                  <td>236</td>
+                  <td>ec</td>
+                  <td>ì</td>
+                  <td>%ec</td>
+                </tr>
+                <tr>
+                  <td>237</td>
+                  <td>ed</td>
+                  <td>í</td>
+                  <td>%ed</td>
+                </tr>
+                <tr>
+                  <td>238</td>
+                  <td>ee</td>
+                  <td>î</td>
+                  <td>%ee</td>
+                </tr>
+                <tr>
+                  <td>239</td>
+                  <td>ef</td>
+                  <td>ï</td>
+                  <td>%ef</td>
+                </tr>
+                <tr>
+                  <td>240</td>
+                  <td>f0</td>
+                  <td>ð</td>
+                  <td>%f0</td>
+                </tr>
+                <tr>
+                  <td>241</td>
+                  <td>f1</td>
+                  <td>ñ</td>
+                  <td>%f1</td>
+                </tr>
+                <tr>
+                  <td>242</td>
+                  <td>f2</td>
+                  <td>ò</td>
+                  <td>%f2</td>
+                </tr>
+                <tr>
+                  <td>243</td>
+                  <td>f3</td>
+                  <td>ó</td>
+                  <td>%f3</td>
+                </tr>
+                <tr>
+                  <td>244</td>
+                  <td>f4</td>
+                  <td>ô</td>
+                  <td>%f4</td>
+                </tr>
+                <tr>
+                  <td>245</td>
+                  <td>f5</td>
+                  <td>õ</td>
+                  <td>%f5</td>
+                </tr>
+                <tr>
+                  <td>246</td>
+                  <td>f6</td>
+                  <td>ö</td>
+                  <td>%f6</td>
+                </tr>
+                <tr>
+                  <td>247</td>
+                  <td>f7</td>
+                  <td>÷</td>
+                  <td>%f7</td>
+                </tr>
+                <tr>
+                  <td>248</td>
+                  <td>f8</td>
+                  <td>ø</td>
+                  <td>%f8</td>
+                </tr>
+                <tr>
+                  <td>249</td>
+                  <td>f9</td>
+                  <td>ù</td>
+                  <td>%f9</td>
+                </tr>
+                <tr>
+                  <td>250</td>
+                  <td>fa</td>
+                  <td>ú</td>
+                  <td>%fa</td>
+                </tr>
+                <tr>
+                  <td>251</td>
+                  <td>fb</td>
+                  <td>û</td>
+                  <td>%fb</td>
+                </tr>
+                <tr>
+                  <td>252</td>
+                  <td>fc</td>
+                  <td>ü</td>
+                  <td>%fc</td>
+                </tr>
+                <tr>
+                  <td>253</td>
+                  <td>fd</td>
+                  <td>ý</td>
+                  <td>%fd</td>
+                </tr>
+                <tr>
+                  <td>254</td>
+                  <td>fe</td>
+                  <td>þ</td>
+                  <td>%fe</td>
+                </tr>
+                <tr>
+                  <td>255</td>
+                  <td>ff</td>
+                  <td>ÿ</td>
+                  <td>%ff</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h3>Reserved Characters Encoding</h3>
+            <table style="text-align:center" class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th class="ts">Decimal</th>
+                  <th class="ts">Hex Value</th>
+                  <th class="ts">Char</th>
+                  <th class="ts">URL Encode</th>
+                </tr>
+                <tr>
+                  <td>36</td>
+                  <td>24</td>
+                  <td>$</td>
+                  <td>%24</td>
+                </tr>
+                <tr>
+                  <td>38</td>
+                  <td>26</td>
+                  <td>&amp;</td>
+                  <td>%26</td>
+                </tr>
+                <tr>
+                  <td>43</td>
+                  <td>2b</td>
+                  <td>+</td>
+                  <td>%2b</td>
+                </tr>
+                <tr>
+                  <td>44</td>
+                  <td>2c</td>
+                  <td>,</td>
+                  <td>%2c</td>
+                </tr>
+                <tr>
+                  <td>47</td>
+                  <td>2f</td>
+                  <td>/</td>
+                  <td>%2f</td>
+                </tr>
+                <tr>
+                  <td>58</td>
+                  <td>3a</td>
+                  <td>:</td>
+                  <td>%3a</td>
+                </tr>
+                <tr>
+                  <td>59</td>
+                  <td>3b</td>
+                  <td>;</td>
+                  <td>%3b</td>
+                </tr>
+                <tr>
+                  <td>61</td>
+                  <td>3d</td>
+                  <td>=</td>
+                  <td>%3d</td>
+                </tr>
+                <tr>
+                  <td>63</td>
+                  <td>3f</td>
+                  <td>?</td>
+                  <td>%3f</td>
+                </tr>
+                <tr>
+                  <td>64</td>
+                  <td>40</td>
+                  <td>@</td>
+                  <td>%40</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h3>Unsafe Characters Encoding</h3>
+            <table style="text-align:center" class="table table-bordered">
+              <tbody>
+                <tr>
+                  <th class="ts">Decimal</th>
+                  <th class="ts">Hex Value</th>
+                  <th class="ts">Char</th>
+                  <th class="ts">URL Encode</th>
+                </tr>
+                <tr>
+                  <td>32</td>
+                  <td>20</td>
+                  <td>space</td>
+                  <td>%20</td>
+                </tr>
+                <tr>
+                  <td>34</td>
+                  <td>22</td>
+                  <td>"</td>
+                  <td>%22</td>
+                </tr>
+                <tr>
+                  <td>60</td>
+                  <td>3c</td>
+                  <td>&lt;</td>
+                  <td>%3c</td>
+                </tr>
+                <tr>
+                  <td>62</td>
+                  <td>3e</td>
+                  <td>&gt;</td>
+                  <td>%3e</td>
+                </tr>
+                <tr>
+                  <td>35</td>
+                  <td>23</td>
+                  <td>#</td>
+                  <td>%23</td>
+                </tr>
+                <tr>
+                  <td>37</td>
+                  <td>25</td>
+                  <td>%</td>
+                  <td>%25</td>
+                </tr>
+                <tr>
+                  <td>123</td>
+                  <td>7b</td>
+                  <td>{</td>
+                  <td>%7b</td>
+                </tr>
+                <tr>
+                  <td>125</td>
+                  <td>7d</td>
+                  <td>}</td>
+                  <td>%7d</td>
+                </tr>
+                <tr>
+                  <td>124</td>
+                  <td>7c</td>
+                  <td>|</td>
+                  <td>%7c</td>
+                </tr>
+                <tr>
+                  <td>92</td>
+                  <td>5c</td>
+                  <td>\</td>
+                  <td>%5c</td>
+                </tr>
+                <tr>
+                  <td>94</td>
+                  <td>5e</td>
+                  <td>^</td>
+                  <td>%5e</td>
+                </tr>
+                <tr>
+                  <td>126</td>
+                  <td>7e</td>
+                  <td>~</td>
+                  <td>%7e</td>
+                </tr>
+                <tr>
+                  <td>91</td>
+                  <td>5b</td>
+                  <td>[</td>
+                  <td>%5b</td>
+                </tr>
+                <tr>
+                  <td>93</td>
+                  <td>5d</td>
+                  <td>]</td>
+                  <td>%5d</td>
+                </tr>
+                <tr>
+                  <td>96</td>
+                  <td>60</td>
+                  <td>`</td>
+                  <td>%60</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer id="footer" class="section-bg">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Encoder / Decoder</h4>
+                <ul>
+                  <li>
+                    <a href="string-sha1-hash-generator.html">SHA1 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha256-hash-generator.html">SHA256 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha512-hash-generator.html">SHA512 Hash Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-base64-encode.html">base64 Encode</a>
+                  </li>
+                  <li>
+                    <a href="base64-string.html">base64-String</a>
+                  </li>
+                  <li>
+                    <a href="url-encode.html">URL Encode</a>
+                  </li>
+                  <li>
+                    <a href="url-decode.html">URL Decode</a>
+                  </li>
+                  <li>
+                    <a href="string-md5-hash-generator.html">MD5 Hash Generator</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Random Utilies Tools</h4>
+                <ul>
+                  <li>
+                    <a href="random-letter-generator.html">Random Letter Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-password-generator.html">Random Password Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-ip-generator.html">Random IP Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-prime-generator.html">Random Prime Generator</a>
+                  </li>
+                  <li>
+                    <a href="text-lines-shuffle.html">Text Lines Shuffle</a>
+                  </li>
+                  <li>
+                    <a href="random-time.html">Random Time</a>
+                  </li>
+                  <li>
+                    <a href="random-date.html">Random Date</a>
+                  </li>
+                  <li>
+                    <a href="random-csv-generator.html">Random CSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-regular-expression.html">Random Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="random-json-generator.html">Random JSON Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-number-generator.html">Random Number Generator</a>
+                  </li>
+                  <li>
+                    <a href="favicon-generator.html">Favicon Generator</a>
+                  </li>
+                  <li>
+                    <a href="sharelink-generator.html">Sharelink Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-hex-generator.html">Random Hexadecimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-binary-generator.html">Random Binary Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-decimal-generator.html">Random Decimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-generator.html">Random Integer Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-name-picker.html">Random Name Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-bitmap-generator.html">Random Bitmap Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-mac-generator.html">Random MAC address Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-tsv.html">Random TSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-uuid-generator.html">Random uuid Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-string-generator.html">Random String Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-range-generator.html">Random Integer Range Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-fraction-generator.html">Random Fraction Generator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="footer-links">
+                <h4>Converter Tools</h4>
+                <ul>
+                  <li>
+                    <a href="csv-To-html-converter.html">CSV To HTML</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-json-converter.html">CSV To JSON</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-csv-converter.html">XML To CSV</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-tsv-converter.html">CSV To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-csv-converter.html">json To csv</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-html-converter.html">XML To HTML</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-tsv-converter.html">XML To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-html-converter.html">JSON To HTML</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Developers Tools</h4>
+                <ul>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="regexp-test.html">Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-mac-address.html">MAC Address</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-ip.html">IP Address</a>
+                  </li>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="hostname-to-ip.html">Hostname To Ip</a>
+                  </li>
+                  <li>
+                    <a href="ip-to-hostname.html">Ip To Hostname</a>
+                  </li>
+                  <li>
+                    <a href="delimited-text-extract.html">Delimited text extract</a>
+                  </li>
+                  <li>
+                    <a href="dns-lookup.html">DNS lookup</a>
+                  </li>
+                  <li>
+                    <a href="dns-mx-record.html">DNS mx record</a>
+                  </li>
+                  <li>
+                    <a href="get-ipinfo.html">Ip Information</a>
+                  </li>
+                  <li>
+                    <a href="google-system-local-font-picker.html">google font picker</a>
+                  </li>
+                  <li>
+                    <a href="open-port.html">Open Port</a>
+                  </li>
+                  <li>
+                    <a href="server-headers-check.html">Server Headers Check</a>
+                  </li>
+                  <li>
+                    <a href="playground.html">HTML, CSS, Javascript playground to test and share</a>
+                  </li>
+                  <li>
+                    <a href="api-tester.html">API Tester</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp.html">unix timestamp</a>
+                  </li>
+                  <li>
+                    <a href="json-editor.html">json editor tree</a>
+                  </li>
+                  <li>
+                    <a href="javascript-obfuscator.html">javascript obfuscator</a>
+                  </li>
+                  <li>
+                    <a href="image-editor.html">Image Editor</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp-converter.html">Unix Timestamp Converter</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Validation Tools</h4>
+                <ul>
+                  <li>
+                    <a href="css-validation.html">CSS Validation</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-validator.html">Credit Card Vailidator</a>
+                  </li>
+                  <li>
+                    <a href="un-google-link.html">Un-Google Link</a>
+                  </li>
+                  <li>
+                    <a href="yaml-validator.html">YAML Validator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Number Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="binary-to-decimal-converter.html">Binary To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-octal-converter.html">Binary To Octal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-hex-converter.html">Binary To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-string-converter.html">Binary To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-binary-converter.html">String To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-binary-converter.html">Decimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-hex-converter.html">Decimal To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-octal-converter.html">Decimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-binary-converter.html">Hexadecimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-decimal-converter.html">Hexadecimal To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-octal-converter.html">Hexadecimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-string-converter.html">Hexadecimal To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-hex-converter.html">String To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="octal-to-binary-converter.html">Octal To Binary</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Color Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="rgb-to-hex-converter.html">RGB To HEX</a>
+                  </li>
+                  <ul>
+                    <li>
+                      <a href="hex-to-rgb-converter.html">HEX To RGB</a>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>String / Esacape/ Unescape</h4>
+                <ul>
+                  <li>
+                    <a href="word-count.html">Word To Count</a>
+                  </li>
+                  <li>
+                    <a href="html-escape.html">HTML To escape</a>
+                  </li>
+                  <li>
+                    <a href="html-unescape.html">HTML To unescape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-escape.html">Javascript To escape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-unescape.html">Javascript To unescape</a>
+                  </li>
+                  <li>
+                    <a href="json-escape.html">JSON To escape</a>
+                  </li>
+                  <li>
+                    <a href="json-unescape.html">JSON To unescape</a>
+                  </li>
+                  <li>
+                    <a href="number-to-word-converter.html">Number To Word</a>
+                  </li>
+                  <li>
+                    <a href="xml-escape.html">xml escape</a>
+                  </li>
+                  <li>
+                    <a href="xml-unescape.html">xml unescape</a>
+                  </li>
+                  <li>
+                    <a href="strip-html.html">Strip HTML</a>
+                  </li>
+                  <li>
+                    <a href="strip-xml.html">Strip XML</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Formater / Beautify / Minify</h4>
+                <ul>
+                  <li>
+                    <a href="html-formatter-beautifier.html">HTML Beautify</a>
+                  </li>
+                  <li>
+                    <a href="html-minify.html">HTML Minify</a>
+                  </li>
+                  <li>
+                    <a href="css-formatter-beautifier.html">CSS Beautify</a>
+                  </li>
+                  <li>
+                    <a href="css-minify.html">CSS Minify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-formatter-beautifier.html">Javascript Beautify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-minify.html">Javascript Minify</a>
+                  </li>
+                  <li>
+                    <a href="php-formatter-beautifier.html">PHP Beautify</a>
+                  </li>
+                  <li>
+                    <a href="php-minify.html">PHP Minify</a>
+                  </li>
+                  <li>
+                    <a href="python-formatter-beautifier.html">Python Beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-formatter-beautifier.html">JSON beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-minify.html">JSON minify</a>
+                  </li>
+                  <li>
+                    <a href="sql-formatter-beautifier.html">SQL beautify</a>
+                  </li>
+                  <li>
+                    <a href="xml-formatter-beautifier.html">XML beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-formatter-beautifier.html">C++ Beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-minify.html">C++ Minify</a>
+                  </li>
+                  <li>
+                    <a href="c-formatter-beautifier.html">C Beautify</a>
+                  </li>
+                  <li>
+                    <a href="c-minify.html">C Minify</a>
+                  </li>
+                  <li>
+                    <a href="go-formatter-beautifier.html">Go Beautify</a>
+                  </li>
+                  <li>
+                    <a href="remove-duplicate-lines.html">Remove Duplicate Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-empty-lines.html">Remove Empty Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-extra-spaces.html">Remove Extra Spaces</a>
+                  </li>
+                  <li>
+                    <a href="remove-line-breaks.html">Remove Line Breaks</a>
+                  </li>
+                  <li>
+                    <a href="reverse-string.html">Reverse String</a>
+                  </li>
+                  <li>
+                    <a href="rot13-to-text-converter.html">ROT13 to Text Converter</a>
+                  </li>
+                  <li>
+                    <a href="sort-text-lines.html">Sort Text Lines</a>
+                  </li>
+                  <li>
+                    <a href="text-to-rot13-converter.html">Text to ROT13 Converter</a>
+                  </li>
+                  <li>
+                    <a href="upside-down-text.html">upside down text</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-accents.html">Online Remove Accents</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-lines-containing.html">Online-Remove-Lines-Containing</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Finance Tools</h4>
+                <ul>
+                  <li>
+                    <a href="emi-calculator.html">Home Loan</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Car Loan</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-generate.html">Credit Card Generate</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Personal Loan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">© Copyright
+          <strong>W3tools.CC</strong>. All Rights Reserved</div>
+        <div class="credits">Developed by W3tools.CC</div>
+      </div>
+    </footer>
+    <a href="#" class="back-to-top">
+      <i class="fa fa-chevron-up">
+      </i>
+    </a>
+    <script src="../../static/js/jquery.min.js">
+    </script>
+    <script src="../../static/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="../../static/css/editor.css">
+    </script>
+    <script src="../../static/js/ace.js">
+    </script>
+    <script src="../../static/js/custom-tool.js">
+    </script>
+    <script src="../../static/js/jquery.min1.js">
+    </script>
+    <script>$('.btn-primary').hide();
+      var editor1 = ace.edit("editor1");
+      var editor2 = ace.edit("editor2");
+      //editor1.setValue("<h1>Hello World</h1>");
+      document.getElementById('editor1').addEventListener('keyup',
+      function(item) {
+        var data = editor1.getValue();
+        if (data == '') {
+          $('.btn-primary').hide();
+          editor2.setValue('');
+          return;
+        }
+        covert(data);
+        $('.btn-primary').show();
+      });
+
+      function covert(data) {
+        editor2.setValue(encodeURIComponent(data));
+      }
+
+      function onFileSelected(event) {
+        var selectedFile = event.target.files[0];
+        var reader = new FileReader();
+        reader.onload = function(event) {
+          var data = event.target.result;
+          covert(data);
+          $('.btn-primary').show();
+        };
+        reader.readAsText(selectedFile);
+      }
+
+      $(document).ready(function(e) {
+
+        $('#copy').on('click',
+        function() {
+          var data = editor2.getValue();
+          copyToClipboard(editor2);
+        });
+
+        $('#download1').on('click',
+        function() {
+          var data = editor2.getValue();
+          makefile(data, 'txt');
+        });
+
+        $("#menu2 input[name=url]").keyup(function(e) {
+          if ($("#menu2 input[name=url]").val() == '') {
+            return;
+          }
+          $("#menu2 input[name=submit]").val('Please wait');
+          if (!/^(http|https|ftp):\/\/[a-z0-9]+([\-\.]{1}[a-z0-9]+)*\.[a-z]{2,5}(:[0-9]{1,5})?(\/.*)?$/i.test($("#menu2 input[name=url]").val())) {
+            $("#menu2 input[name=submit]").val('Load URL');
+            $('.btn-primary').hide();
+            editor2.setValue('');
+            return;
+          }
+          $.ajax({
+            type: "POST",
+            url: '../include/url_load.php',
+            data: {
+              url: $("#menu2 input[name=url]").val()
+            },
+            success: function(data) {
+              if (data == '') {
+                $('.btn-primary').hide();
+                editor2.setValue('');
+                return;
+              }
+              covert(data);
+              $("#menu2 input[name=submit]").val('Load URL');
+              $('.btn-primary').show();
+            }
+          });
+        });
+      });</script>
+  </body>
+
+</html>

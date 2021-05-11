@@ -1,0 +1,763 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Best ShareLink Generator Tool</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="❤Top ShareLink Generator - ❤specially created links for different social media networks that allow instant sharing without having to copy and paste links." name="description">
+    <link href="static/image/favicon.ico" rel="icon">
+    <link href="static/css/css.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/all.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <style>.searchbar{ margin-bottom: auto; margin-top: auto; width:100%; height: 50px; } .search_input{ border: 0; outline: 0; background: none; width: 0; caret-color:transparent; line-height: 40px; transition: width 0.4s linear; } .searchbar > .search_input{ padding: 0 10px; width: 55%; caret-color:red; transition: width 0.4s linear; } .search_icon:hover{ color: #fff; } .search_icon{ height: 48px; width: 60px; display: flex; justify-content: center; align-items: center; /* border-radius: 50%; */ color: white; text-decoration: none; background-color: #4267b2; } .facebook .search_icon{ background-color: #4267b2; } .facebook .searchbar{ border: 1px solid #4267b2; } .twitter .search_icon{ background-color: #0098f4; } .twitter .searchbar{ border: 1px solid #0098f4; } .pinterest .search_icon{ background-color: #dc0000; } .pinterest .searchbar{ border: 1px solid #dc0000; } .linkedin .search_icon{ background-color: #0067b1; } .linkedin .searchbar{ border: 1px solid #0067b1; } .mail .search_icon{ background-color: #3b3b3b; } .mail .searchbar{ border: 1px solid #3b3b3b; } @media (max-width: 576px){ .searchbar { height:138px; } .search_icon { width:33.3333%; } .main-icon,.searchbar > .search_input{ width:100%; } }</style>
+  </head>
+  
+  <body>
+    <header id="header" class="header-scrolled">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <a href="javascript:;" class="twitter">
+              <i class="fa fa-twitter">
+              </i>
+            </a>
+            <a href="javascript:;" class="facebook">
+              <i class="fa fa-facebook">
+              </i>
+            </a>
+            <a href="javascript:;" class="linkedin">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+            <a href="javascript:;" class="instagram">
+              <i class="fa fa-instagram">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light main-nav bg-white">
+          <a href="index.html" class="scrollto">
+            W3tools
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="css-minify.html">CSS minify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="string-to-binary-converter.html">String to Binary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="json-formatter-beautifier.html">JSON Beautify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="word-count.html">Word Count</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favicon-generator.html">Favicon Generator</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- #header -->
+    <div class="container p-l-30 p-r-30">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h1 class="tool-title">Sharelink Generator</h1>
+        </div>
+      </div>
+      <main id="main">
+        <div class="row editor-container">
+          <div style="min-height:320px">
+            <div class="editor-position d-none" id="editor1">
+            </div>
+            <div class="code editor-position d-none" id="editor2">
+            </div>
+          </div>
+          <div class="col-sm-12 row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6 ">
+              <div class="card">
+                <div class="card-header">Sharelink Generator</div>
+                <div class="card-body">
+                  <div class="form-group">
+                    <label>Link :</label>
+                    <input type="text" name="link" id="link" placeholder="Enter Link" class="form-control">
+                    <div class="text-right">
+                      <button class="btn btn-primary mt-1" id="create-link">Create Link</button>
+                    </div>
+                    <div class="mt-3" id="share-link-detail" style="display:none;">
+                      <div class="d-flex justify-content-center h-100 facebook m-1">
+                        <div class="searchbar">
+                          <a href="javascript:;" class="search_icon float-left main-icon">
+                            <i class="fab fa-facebook-f">
+                            </i>
+                          </a>
+                          <input class="search_input" type="text" name="" placeholder="Search...">
+                          <a href="javascript:;" class="search_icon float-right" title="Copy HTML Code">
+                            <i class="fas fa-code">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Copy Link">
+                            <i class="far fa-copy">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Test Link">
+                            <i class="fas fa-arrow-right">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center h-100 twitter m-1">
+                        <div class="searchbar">
+                          <a href="javascript:;" class="search_icon float-left main-icon">
+                            <i class="fab fa-twitter">
+                            </i>
+                          </a>
+                          <input class="search_input" type="text" name="" placeholder="Search...">
+                          <a href="javascript:;" class="search_icon float-right" title="Copy HTML Code">
+                            <i class="fas fa-code">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Copy Link">
+                            <i class="far fa-copy">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Test Link">
+                            <i class="fas fa-arrow-right">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center h-100 pinterest m-1">
+                        <div class="searchbar">
+                          <a href="javascript:;" class="search_icon float-left main-icon">
+                            <i class="fab fa-pinterest">
+                            </i>
+                          </a>
+                          <input class="search_input" type="text" name="" placeholder="Search...">
+                          <a href="javascript:;" class="search_icon float-right" title="Copy HTML Code">
+                            <i class="fas fa-code">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Copy Link">
+                            <i class="far fa-copy">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Test Link">
+                            <i class="fas fa-arrow-right">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center h-100 linkedin m-1">
+                        <div class="searchbar">
+                          <a href="javascript:;" class="search_icon float-left main-icon">
+                            <i class="fab fa-linkedin">
+                            </i>
+                          </a>
+                          <input class="search_input" type="text" name="" placeholder="Search...">
+                          <a href="javascript:;" class="search_icon float-right" title="Copy HTML Code">
+                            <i class="fas fa-code">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Copy Link">
+                            <i class="far fa-copy">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Test Link">
+                            <i class="fas fa-arrow-right">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-flex justify-content-center h-100 mail m-1">
+                        <div class="searchbar">
+                          <a href="javascript:;" class="search_icon float-left main-icon">
+                            <i class="fas fa-envelope">
+                            </i>
+                          </a>
+                          <input class="search_input" type="text" name="" placeholder="Search...">
+                          <a href="javascript:;" class="search_icon float-right" title="Copy HTML Code">
+                            <i class="fas fa-code">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Copy Link">
+                            <i class="far fa-copy">
+                            </i>
+                          </a>
+                          <a href="javascript:;" class="search_icon float-right" title="Test Link">
+                            <i class="fas fa-arrow-right">
+                            </i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row tool-content-box">
+          <div class="col-md-8">
+            <h2>Best Free Online ShareLink Generator Tool</h2>
+            <p>Share links are specially created links for different social media networks that allow instant sharing without having to copy and paste links manually, making it possible for your visitors to simply share your website content.</p>
+            <p>You’ve surely seen the “share this” icons below blog posts on websites or noticed the “share” button on Facebook posts. Sharing content online – whether it’s a fantastic blog post, a YouTube video or a startling news article – has to be simple or people just aren’t going to do it.</p>
+            <br>
+            <h3>Why Do I Need a Share Link?</h3>
+            <p>Not only do share links make it easier for you to share custom links to your own content, but by making these links available to your visitors you increase the chances of your content being shared. While some website builders and platforms like WordPress support share buttons and links, these are not always available – for example, if you’re on a free plan on a website builder, you may have to pay to access share buttons. The share link generator is a free and easy way of getting the links you need.</p>
+            <br>
+            <h3>How Does the Share Link Creator Work?</h3>
+            <p>The Share Link Creator tool couldn’t be easier to use. Just add the URL of the web page, blog, image, video etc., into the box, select the social media platform you want to create a link for (or choose “all”), add any text you want to add (works with Twitter, LinkedIn, and Pinterest) and click the “create links” button.</p>
+            <p>In seconds, you’ll have custom links for sharing your content that you can test, and copy. Plus, you can copy the HTML code for the link so you can add “share” links to your website and emails, too.</p>
+            <p>With Pinterest, LinkedIn and email links, you can click the “more options” button for additional information to be added to your link. For email, you can add the email address, subject, and message body. For Pinterest, you can add an image thumbnail URL and text, and for LinkedIn, you can add a post title, text, and source.</p>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </main>
+    </div>
+    <textarea id="input">https://www.google.co.in/url?sa=t&rct=j&q=&esrc=s&source=web&cd=1&cad=rja&uact=8&ved=0ahUKEwjB7JO54LDJAhULV44KHQQYB1cQFggbMAA&url=http%3A%2F%2Fw3tools.cc%2F&usg=AFQjCNG_DKhs4g3mbjzuEWxEa2aHGfqYgw&sig2=a54qV321O8wYGpJ2kbfCNg&bvm=bv.108194040,d.c2E</textarea>
+    <textarea id="output">
+    </textarea>
+    <input type="hidden" id="viewName" value="un-google-link">
+    <button onclick="escape('un-google-link')">fd</button>
+    <footer id="footer" class="section-bg">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Encoder / Decoder</h4>
+                <ul>
+                  <li>
+                    <a href="string-sha1-hash-generator.html">SHA1 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha256-hash-generator.html">SHA256 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha512-hash-generator.html">SHA512 Hash Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-base64-encode.html">base64 Encode</a>
+                  </li>
+                  <li>
+                    <a href="base64-string.html">base64-String</a>
+                  </li>
+                  <li>
+                    <a href="url-encode.html">URL Encode</a>
+                  </li>
+                  <li>
+                    <a href="url-decode.html">URL Decode</a>
+                  </li>
+                  <li>
+                    <a href="string-md5-hash-generator.html">MD5 Hash Generator</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Random Utilies Tools</h4>
+                <ul>
+                  <li>
+                    <a href="random-letter-generator.html">Random Letter Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-password-generator.html">Random Password Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-ip-generator.html">Random IP Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-prime-generator.html">Random Prime Generator</a>
+                  </li>
+                  <li>
+                    <a href="text-lines-shuffle.html">Text Lines Shuffle</a>
+                  </li>
+                  <li>
+                    <a href="random-time.html">Random Time</a>
+                  </li>
+                  <li>
+                    <a href="random-date.html">Random Date</a>
+                  </li>
+                  <li>
+                    <a href="random-csv-generator.html">Random CSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-regular-expression.html">Random Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="random-json-generator.html">Random JSON Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-number-generator.html">Random Number Generator</a>
+                  </li>
+                  <li>
+                    <a href="favicon-generator.html">Favicon Generator</a>
+                  </li>
+                  <li>
+                    <a href="sharelink-generator.html">Sharelink Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-hex-generator.html">Random Hexadecimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-binary-generator.html">Random Binary Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-decimal-generator.html">Random Decimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-generator.html">Random Integer Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-name-picker.html">Random Name Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-bitmap-generator.html">Random Bitmap Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-mac-generator.html">Random MAC address Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-tsv.html">Random TSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-uuid-generator.html">Random uuid Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-string-generator.html">Random String Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-range-generator.html">Random Integer Range Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-fraction-generator.html">Random Fraction Generator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="footer-links">
+                <h4>Converter Tools</h4>
+                <ul>
+                  <li>
+                    <a href="csv-To-html-converter.html">CSV To HTML</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-json-converter.html">CSV To JSON</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-csv-converter.html">XML To CSV</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-tsv-converter.html">CSV To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-csv-converter.html">json To csv</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-html-converter.html">XML To HTML</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-tsv-converter.html">XML To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-html-converter.html">JSON To HTML</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Developers Tools</h4>
+                <ul>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="regexp-test.html">Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-mac-address.html">MAC Address</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-ip.html">IP Address</a>
+                  </li>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="hostname-to-ip.html">Hostname To Ip</a>
+                  </li>
+                  <li>
+                    <a href="ip-to-hostname.html">Ip To Hostname</a>
+                  </li>
+                  <li>
+                    <a href="delimited-text-extract.html">Delimited text extract</a>
+                  </li>
+                  <li>
+                    <a href="dns-lookup.html">DNS lookup</a>
+                  </li>
+                  <li>
+                    <a href="dns-mx-record.html">DNS mx record</a>
+                  </li>
+                  <li>
+                    <a href="get-ipinfo.html">Ip Information</a>
+                  </li>
+                  <li>
+                    <a href="google-system-local-font-picker.html">google font picker</a>
+                  </li>
+                  <li>
+                    <a href="open-port.html">Open Port</a>
+                  </li>
+                  <li>
+                    <a href="server-headers-check.html">Server Headers Check</a>
+                  </li>
+                  <li>
+                    <a href="playground.html">HTML, CSS, Javascript playground to test and share</a>
+                  </li>
+                  <li>
+                    <a href="api-tester.html">API Tester</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp.html">unix timestamp</a>
+                  </li>
+                  <li>
+                    <a href="json-editor.html">json editor tree</a>
+                  </li>
+                  <li>
+                    <a href="javascript-obfuscator.html">javascript obfuscator</a>
+                  </li>
+                  <li>
+                    <a href="image-editor.html">Image Editor</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp-converter.html">Unix Timestamp Converter</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Validation Tools</h4>
+                <ul>
+                  <li>
+                    <a href="css-validation.html">CSS Validation</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-validator.html">Credit Card Vailidator</a>
+                  </li>
+                  <li>
+                    <a href="un-google-link.html">Un-Google Link</a>
+                  </li>
+                  <li>
+                    <a href="yaml-validator.html">YAML Validator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Number Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="binary-to-decimal-converter.html">Binary To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-octal-converter.html">Binary To Octal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-hex-converter.html">Binary To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-string-converter.html">Binary To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-binary-converter.html">String To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-binary-converter.html">Decimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-hex-converter.html">Decimal To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-octal-converter.html">Decimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-binary-converter.html">Hexadecimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-decimal-converter.html">Hexadecimal To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-octal-converter.html">Hexadecimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-string-converter.html">Hexadecimal To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-hex-converter.html">String To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="octal-to-binary-converter.html">Octal To Binary</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Color Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="rgb-to-hex-converter.html">RGB To HEX</a>
+                  </li>
+                  <ul>
+                    <li>
+                      <a href="hex-to-rgb-converter.html">HEX To RGB</a>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>String / Esacape/ Unescape</h4>
+                <ul>
+                  <li>
+                    <a href="word-count.html">Word To Count</a>
+                  </li>
+                  <li>
+                    <a href="html-escape.html">HTML To escape</a>
+                  </li>
+                  <li>
+                    <a href="html-unescape.html">HTML To unescape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-escape.html">Javascript To escape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-unescape.html">Javascript To unescape</a>
+                  </li>
+                  <li>
+                    <a href="json-escape.html">JSON To escape</a>
+                  </li>
+                  <li>
+                    <a href="json-unescape.html">JSON To unescape</a>
+                  </li>
+                  <li>
+                    <a href="number-to-word-converter.html">Number To Word</a>
+                  </li>
+                  <li>
+                    <a href="xml-escape.html">xml escape</a>
+                  </li>
+                  <li>
+                    <a href="xml-unescape.html">xml unescape</a>
+                  </li>
+                  <li>
+                    <a href="strip-html.html">Strip HTML</a>
+                  </li>
+                  <li>
+                    <a href="strip-xml.html">Strip XML</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Formater / Beautify / Minify</h4>
+                <ul>
+                  <li>
+                    <a href="html-formatter-beautifier.html">HTML Beautify</a>
+                  </li>
+                  <li>
+                    <a href="html-minify.html">HTML Minify</a>
+                  </li>
+                  <li>
+                    <a href="css-formatter-beautifier.html">CSS Beautify</a>
+                  </li>
+                  <li>
+                    <a href="css-minify.html">CSS Minify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-formatter-beautifier.html">Javascript Beautify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-minify.html">Javascript Minify</a>
+                  </li>
+                  <li>
+                    <a href="php-formatter-beautifier.html">PHP Beautify</a>
+                  </li>
+                  <li>
+                    <a href="php-minify.html">PHP Minify</a>
+                  </li>
+                  <li>
+                    <a href="python-formatter-beautifier.html">Python Beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-formatter-beautifier.html">JSON beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-minify.html">JSON minify</a>
+                  </li>
+                  <li>
+                    <a href="sql-formatter-beautifier.html">SQL beautify</a>
+                  </li>
+                  <li>
+                    <a href="xml-formatter-beautifier.html">XML beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-formatter-beautifier.html">C++ Beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-minify.html">C++ Minify</a>
+                  </li>
+                  <li>
+                    <a href="c-formatter-beautifier.html">C Beautify</a>
+                  </li>
+                  <li>
+                    <a href="c-minify.html">C Minify</a>
+                  </li>
+                  <li>
+                    <a href="go-formatter-beautifier.html">Go Beautify</a>
+                  </li>
+                  <li>
+                    <a href="remove-duplicate-lines.html">Remove Duplicate Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-empty-lines.html">Remove Empty Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-extra-spaces.html">Remove Extra Spaces</a>
+                  </li>
+                  <li>
+                    <a href="remove-line-breaks.html">Remove Line Breaks</a>
+                  </li>
+                  <li>
+                    <a href="reverse-string.html">Reverse String</a>
+                  </li>
+                  <li>
+                    <a href="rot13-to-text-converter.html">ROT13 to Text Converter</a>
+                  </li>
+                  <li>
+                    <a href="sort-text-lines.html">Sort Text Lines</a>
+                  </li>
+                  <li>
+                    <a href="text-to-rot13-converter.html">Text to ROT13 Converter</a>
+                  </li>
+                  <li>
+                    <a href="upside-down-text.html">upside down text</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-accents.html">Online Remove Accents</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-lines-containing.html">Online-Remove-Lines-Containing</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Finance Tools</h4>
+                <ul>
+                  <li>
+                    <a href="emi-calculator.html">Home Loan</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Car Loan</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-generate.html">Credit Card Generate</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Personal Loan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">© Copyright
+          <strong>W3tools.CC</strong>. All Rights Reserved</div>
+        <div class="credits">Developed by W3tools.CC</div>
+      </div>
+    </footer>
+    <a href="javascript:;" class="back-to-top">
+      <i class="fa fa-chevron-up">
+      </i>
+    </a>
+    <script src="static/js/jquery.min.js">
+    </script>
+    <script src="static/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="static/css/editor.css">
+    </script>
+    <script src="static/js/ace.js">
+    </script>
+    <script src="static/js/custom-tool.js">
+    </script>
+    <script>var editor1 = ace.edit("editor1");
+      var editor2 = ace.edit("editor2");
+      $(document).ready(function(e) {
+        $('#create-link').on('click',
+        function() {
+          var linkdata = $('#link').val();
+          if (linkdata.length > 0) {
+            var facebook = "https://www.facebook.com/sharer/sharer.php?u=" + linkdata;
+            var twitter = "https://twitter.com/home?status=" + linkdata;
+            var pinterest = "https://pinterest.com/pin/create/button/?url=" + linkdata + "&media=&description=";
+            var linkedin = "https://www.linkedin.com/shareArticle?mini=true&url=" + linkdata + "&title=&summary=&source=";
+            var mail = "mailto:info@example.com?&subject=&body=" + linkdata;
+            $('.facebook input').val(facebook);
+            $('.twitter input').val(twitter);
+            $('.pinterest input').val(pinterest);
+            $('.linkedin input').val(linkedin);
+            $('.mail input').val(mail);
+            $('#share-link-detail').show();
+          } else {
+            $('#share-link-detail').hide();
+          }
+        });
+        $('#share-link-detail a').on('click',
+        function(e) {
+          e.preventDefault();
+          if ($(this).children('i').attr('class') == 'fas fa-arrow-right') {
+            window.open($(this).parent().children('input').val(), '_blank');
+          } else if ($(this).children('i').attr('class') == 'far fa-copy') {
+            tinycopyToClipboard($(this).parent().children('input').val());
+          } else if ($(this).children('i').attr('class') == 'fas fa-code') {
+            tinycopyToClipboard('<a href="' + $(this).parent().children('input').val() + '">Save</a>');
+          }
+        });
+      });
+      function unLink(e) {
+        var r = makeLink("url", e);
+        return r || (r = makeLink("adurl", e)),
+        r
+      }
+      function makeLink(e, r) {
+        e = e.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+        var a = new RegExp("[\\?&]" + e + "=([^&#]*)").exec(r);
+        return null == a ? "": decodeURIComponent(a[1].replace(/\+/g, " "))
+      }
+      function escape(e) {
+        var r = $("#input").val(),
+        a = $("#viewName").val().split("-")[0];
+        null != a && 0 != a.trim().length && ("html" == a.trim().toLowerCase() || "xml" == a.trim().toLowerCase() ? r = escapeHtml(r) : "java" == a.trim().toLowerCase() || "csharp" == a.trim().toLowerCase() ? r = escapeJava(r) : "javascript" == a.trim().toLowerCase() || "json" == a.trim().toLowerCase() ? r = escapeJavascript(r) : "sql" == a.trim().toLowerCase() ? r = escapeSQL(r) : "csv" == a.trim().toLowerCase() ? r = escapeCSV(r) : "un" == a.trim().toLowerCase() && (r = unLink(r)), $("#output").val(r))
+      }</script>
+  </body>
+
+</html>

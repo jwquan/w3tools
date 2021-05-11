@@ -1,0 +1,197 @@
+/*----------------------------------------------
+css settings for HTML div exactCenter 
+------------------------------------------------*/
+@import url(css1.css);
+body{
+    margin: 0 auto;
+    padding: 0 auto;
+}
+#main{
+    width: 100%;
+    margin: 1% auto;
+    font-family:raleway;
+}
+span{
+    color:red;
+}
+h1{
+    text-align:center;
+    font-family:raleway;
+}
+h2{
+    background-color: #FEFFED;
+    text-align:center;
+    border-radius: 10px 10px 0 0;
+    margin: -10px -40px;
+    padding: 15px;
+    font-family:raleway;
+}
+hr{
+    border:0;
+    border-bottom:1px solid #ccc;
+    margin: 10px -40px;
+    margin-bottom: 30px;
+}
+#login{
+    width: 289px;
+    border-radius: 10px;
+    font-family:raleway;
+    border: 2px solid #ccc;
+    padding: 10px 40px 33px;
+    margin-top: 23px;
+    margin: 0 auto;
+}
+input[type=text],input[type=password]{
+    width:99.5%;
+    padding: 10px;
+    margin-top: 8px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family:raleway;
+} 
+#email{
+    width:99.5%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+    font-size: 16px;
+    font-family:raleway;
+}
+input[type=submit]{
+    width: 98%;
+    background-color:#FFBC00;
+    color: white;
+    border: 2px solid #FFCB00;
+    padding: 10px;
+    font-size:20px;
+    cursor:pointer;
+    border-radius: 5px;
+}
+#profile{
+    padding:50px;
+    border:1px dashed grey;
+    font-size:20px;
+    background-color:#DCE6F7;
+}
+i{
+    color: black;
+    padding: 18px;
+    margin: 20px;
+}
+#right{
+    width: 96.1%;
+    border: 1px dashed rgb(215, 215, 215);
+    box-shadow: 0px 5px 17px 1px #99A3AD, 0px 0px 40px #EEEEEE;
+    padding: 10%;
+    margin-left: -24px;
+    word-wrap: break-word;
+}
+#right p{
+    padding: 20px;
+}
+#paypal_logo{
+    margin: 10px 315px;
+    float: right;
+}
+#dsubmit{
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+table {
+    font-family: 'Raleway', sans-serif;//
+    color:#666;
+    font-size:12px;
+    text-shadow: 1px 1px 0px #fff;
+    background:#eaebec;//
+    margin:20px;
+    border:#ccc 1px solid;
+    font-size: 16px;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+    -moz-box-shadow: 0 1px 2px #d1d1d1;
+    -webkit-box-shadow: 0 1px 2px #d1d1d1;
+    box-shadow: 0 1px 2px #d1d1d1;
+    margin: 0 auto;
+}
+table th {
+    text-align: center;
+    padding:21px 25px 22px 25px;
+    border-top:1px solid #fafafa;
+    border-bottom:1px solid #e0e0e0;
+    background: #ededed;
+    background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+    background: -moz-linear-gradient(top,  #ededed,  #ebebeb);
+}
+table th:first-child {
+    text-indent: center;
+    padding-left:20px;
+}
+table tr:first-child th:first-child {
+    -moz-border-radius-topleft:3px;
+    -webkit-border-top-left-radius:3px;
+    border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+    -moz-border-radius-topright:3px;
+    -webkit-border-top-right-radius:3px;
+    border-top-right-radius:3px;
+}
+table tr {
+    text-indent: center;
+    padding-left:20px;
+}
+table td:first-child {
+    text-align: center;
+    padding-left:20px;
+    border-left: 0;
+}
+table td {
+
+    padding:18px;
+    border-top: 1px solid #ffffff;
+    border-bottom:1px solid #e0e0e0;
+    border-left: 1px solid #e0e0e0;
+    background: #fafafa;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+    background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+    word-break: break-word!important;
+}
+table tr.even td {
+    background: #f6f6f6;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+    background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td:first-child {
+    -moz-border-radius-bottomleft:3px;
+    -webkit-border-bottom-left-radius:3px;
+    border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+    -moz-border-radius-bottomright:3px;
+    -webkit-border-bottom-right-radius:3px;
+    border-bottom-right-radius:3px;
+}
+table tr:hover td {
+    background: #f2f2f2;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+    background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);
+}
+@media only screen and (max-width:480px){
+    #main {
+        width: 100%;
+    } 
+    #login {
+        width: 75%;
+        margin: 0 auto;
+    }
+    input[type=submit] {
+        width: 98%;
+    }
+    table td {
+
+
+    word-break: break-word!important;
+}
+}

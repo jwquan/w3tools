@@ -1,0 +1,983 @@
+<html lang="en">
+  
+  <head>
+    <meta charset="utf-8">
+    <title>Top Credit Card Validator - W3tools</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="❤Credit Card Validator -  ❤generate credit card numbers for all major brands and also to validate them using the Luhn algorithm." name="description">
+    <link href="static/image/favicon.ico" rel="icon">
+    <link href="static/css/css.css" rel="stylesheet">
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/css/all.min.css" rel="stylesheet">
+    <link href="static/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style2.css">
+  </head>
+  
+  <body>
+    <header id="header" class="header-scrolled">
+      <div id="topbar">
+        <div class="container">
+          <div class="social-links">
+            <a href="javascript:;" class="twitter">
+              <i class="fa fa-twitter">
+              </i>
+            </a>
+            <a href="javascript:;" class="facebook">
+              <i class="fa fa-facebook">
+              </i>
+            </a>
+            <a href="javascript:;" class="linkedin">
+              <i class="fa fa-linkedin">
+              </i>
+            </a>
+            <a href="javascript:;" class="instagram">
+              <i class="fa fa-instagram">
+              </i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light main-nav bg-white">
+          <a href="index.html" class="scrollto">
+            W3tools
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">
+            </span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="css-minify.html">CSS minify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="string-to-binary-converter.html">String to Binary</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="json-formatter-beautifier.html">JSON Beautify</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="word-count.html">Word Count</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="favicon-generator.html">Favicon Generator</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- #header -->
+    <div class="container p-l-30 p-r-30">
+      <div class="row mt-4">
+        <div class="col-md-12">
+          <h1 class="tool-title">Credit Card Validator</h1>
+        </div>
+      </div>
+      <main id="main">
+        <div class="row editor-container">
+          <div style="min-height:320px">
+            <div class="editor-position d-none" id="editor1">
+            </div>
+            <div class="code editor-position d-none" id="editor2">
+            </div>
+          </div>
+          <div class="col-sm-12 row">
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class="card-header">
+                  <label>Credit Card Validator</label>
+                </div>
+                <div class="card-body">
+                  <form id="frmContact" action="" method="post" onsubmit="return validate();">
+                    <div class="field-row">
+                      <label style="padding-top: 20px;">Card Holder Name</label>
+                      <span id="card-holder-name-info" class="info">
+                      </span>
+                      <br>
+                      <input type="text" id="card-holder-name" class="demoInputBox">
+                    </div>
+                    <div class="field-row">
+                      <label>Card Number</label>
+                      <span id="card-number-info" class="info">
+                      </span>
+                      <br>
+                      <input type="text" id="card-number" class="demoInputBox">
+                    </div>
+                    <div class="field-row">
+                      <div class="contact-row column-right">
+                        <label>Expiry Month / Year</label>
+                        <span id="userEmail-info" class="info">
+                        </span>
+                        <br>
+                        <select name="expiryMonth" id="expiryMonth" class="demoSelectBox">
+                          <option value="05">05</option>
+                          <option value="06">6</option>
+                          <option value="07">7</option>
+                          <option value="08">8</option>
+                          <option value="09">9</option>
+                          <option value="10">10</option>
+                          <option value="11">11</option>
+                          <option value="12">12</option>
+                        </select>
+                        <select name="expiryMonth" id="expiryMonth" class="demoSelectBox">
+                          <option value="21">2021</option>
+                          <option value="22">2022</option>
+                          <option value="23">2023</option>
+                          <option value="24">2024</option>
+                          <option value="25">2025</option>
+                          <option value="26">2026</option>
+                          <option value="27">2027</option>
+                          <option value="28">2028</option>
+                          <option value="29">2029</option>
+                          <option value="30">2030</option>
+                          <option value="31">2031</option>
+                        </select>
+                      </div>
+                      <div class="contact-row cvv-box">
+                        <label>CVV</label>
+                        <span id="cvv-info" class="info">
+                        </span>
+                        <br>
+                        <input type="text" name="cvv" id="cvv" class="demoInputBox cvv-input">
+                      </div>
+                    </div>
+                    <div>
+                      <input type="submit" value="Submit" class="btnAction">
+                    </div>
+                    <div id="error-message">
+                    </div>
+                    <div id="success-message">
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row tool-content-box">
+          <div class="col-md-8">
+            <h2>Best Free Online Credit Card Validator</h2>
+            <p>This tool validates if a credit card is valid or not. You can enter the card number either in 4 digit groups or without any spaces.</p>
+            <br>
+            <h3>List of credit card number formats</h3>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>Credit Card Issuer</th>
+                  <th>Starts With ( IIN Range )</th>
+                  <th>Length ( Number of digits )</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <strong>American Express</strong>
+                  </td>
+                  <td>34, 37</td>
+                  <td>15</td>
+                </tr>
+                <tr>
+                  <td>Diners Club - Carte Blanche</td>
+                  <td>300, 301, 302, 303, 304, 305</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>Diners Club - International</td>
+                  <td>36</td>
+                  <td>14</td>
+                </tr>
+                <tr>
+                  <td>Diners Club - USA &amp; Canada</td>
+                  <td>54</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>Discover</td>
+                  <td>6011, 622126 to 622925, 644, 645, 646, 647, 648, 649, 65</td>
+                  <td>16-19</td>
+                </tr>
+                <tr>
+                  <td>InstaPayment</td>
+                  <td>637, 638, 639</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>JCB</td>
+                  <td>3528 to 3589</td>
+                  <td>16-19</td>
+                </tr>
+                <tr>
+                  <td>Maestro</td>
+                  <td>5018, 5020, 5038, 5893, 6304, 6759, 6761, 6762, 6763</td>
+                  <td>16-19</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>MasterCard</strong>
+                  </td>
+                  <td>51, 52, 53, 54, 55, 222100-272099</td>
+                  <td>16</td>
+                </tr>
+                <tr>
+                  <td>
+                    <strong>Visa</strong>
+                  </td>
+                  <td>4</td>
+                  <td>13-16-19</td>
+                </tr>
+                <tr>
+                  <td>Visa Electron</td>
+                  <td>4026, 417500, 4508, 4844, 4913, 4917</td>
+                  <td>16</td>
+                </tr>
+              </tbody>
+            </table>
+            <br>
+            <h3>How to validate a Credit Card Number?</h3>
+            <p>Most credit card number can be validated using the Luhn algorithm, which is more or a less a glorified Modulo 10 formula!</p>
+            <strong>The Luhn Formula:</strong>
+            <ul>
+              <li>Drop the last digit from the number. The last digit is what we want to check against</li>
+              <li>Reverse the numbers</li>
+              <li>Multiply the digits in odd positions (1, 3, 5, etc.) by 2 and subtract 9 to all any result higher than 9</li>
+              <li>Add all the numbers together</li>
+              <li>The check digit (the last number of the card) is the amount that you would need to add to get a multiple of 10 (Modulo 10)</li>
+            </ul>
+            <br>
+            <strong>Luhn Example:</strong>
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th nowrap="nowrap">Step</th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">
+                  </th>
+                  <th nowrap="nowrap">Total</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Original Number:</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>3</td>
+                  <td>7</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>8</td>
+                  <td>5</td>
+                  <td>
+                    <strong>5</strong>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Drop the last digit:</td>
+                  <td>4</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>3</td>
+                  <td>7</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>8</td>
+                  <td>5</td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Reverse the digits:</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>8</td>
+                  <td>6</td>
+                  <td>8</td>
+                  <td>5</td>
+                  <td>7</td>
+                  <td>3</td>
+                  <td>7</td>
+                  <td>6</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>4</td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Multiple odd digits by 2:</td>
+                  <td>10</td>
+                  <td>8</td>
+                  <td>18</td>
+                  <td>9</td>
+                  <td>16</td>
+                  <td>6</td>
+                  <td>16</td>
+                  <td>5</td>
+                  <td>14</td>
+                  <td>3</td>
+                  <td>14</td>
+                  <td>6</td>
+                  <td>10</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Subtract 9 to numbers over 9:</td>
+                  <td>1</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>7</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>1</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>
+                  </td>
+                  <td>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Add all numbers:</td>
+                  <td>1</td>
+                  <td>8</td>
+                  <td>9</td>
+                  <td>9</td>
+                  <td>7</td>
+                  <td>6</td>
+                  <td>7</td>
+                  <td>5</td>
+                  <td>5</td>
+                  <td>3</td>
+                  <td>5</td>
+                  <td>6</td>
+                  <td>1</td>
+                  <td>5</td>
+                  <td>8</td>
+                  <td>
+                  </td>
+                  <td>
+                    <strong>85</strong>
+                  </td>
+                </tr>
+                <tr>
+                  <td>Mod 10:</td>
+                  <td colspan="17">85 modulo 10 =
+                    <strong>5</strong>(last digit of card)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer id="footer" class="section-bg">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Encoder / Decoder</h4>
+                <ul>
+                  <li>
+                    <a href="string-sha1-hash-generator.html">SHA1 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha256-hash-generator.html">SHA256 Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-sha512-hash-generator.html">SHA512 Hash Generator</a>
+                  </li>
+                  <li>
+                    <a href="string-base64-encode.html">base64 Encode</a>
+                  </li>
+                  <li>
+                    <a href="base64-string.html">base64-String</a>
+                  </li>
+                  <li>
+                    <a href="url-encode.html">URL Encode</a>
+                  </li>
+                  <li>
+                    <a href="url-decode.html">URL Decode</a>
+                  </li>
+                  <li>
+                    <a href="string-md5-hash-generator.html">MD5 Hash Generator</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Random Utilies Tools</h4>
+                <ul>
+                  <li>
+                    <a href="random-letter-generator.html">Random Letter Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-password-generator.html">Random Password Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-ip-generator.html">Random IP Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-prime-generator.html">Random Prime Generator</a>
+                  </li>
+                  <li>
+                    <a href="text-lines-shuffle.html">Text Lines Shuffle</a>
+                  </li>
+                  <li>
+                    <a href="random-time.html">Random Time</a>
+                  </li>
+                  <li>
+                    <a href="random-date.html">Random Date</a>
+                  </li>
+                  <li>
+                    <a href="random-csv-generator.html">Random CSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-regular-expression.html">Random Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="random-json-generator.html">Random JSON Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-number-generator.html">Random Number Generator</a>
+                  </li>
+                  <li>
+                    <a href="favicon-generator.html">Favicon Generator</a>
+                  </li>
+                  <li>
+                    <a href="sharelink-generator.html">Sharelink Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-hex-generator.html">Random Hexadecimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-binary-generator.html">Random Binary Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-decimal-generator.html">Random Decimal Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-generator.html">Random Integer Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-name-picker.html">Random Name Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-bitmap-generator.html">Random Bitmap Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-mac-generator.html">Random MAC address Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-tsv.html">Random TSV Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-uuid-generator.html">Random uuid Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-string-generator.html">Random String Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-integer-range-generator.html">Random Integer Range Generator</a>
+                  </li>
+                  <li>
+                    <a href="random-fraction-generator.html">Random Fraction Generator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="footer-links">
+                <h4>Converter Tools</h4>
+                <ul>
+                  <li>
+                    <a href="csv-To-html-converter.html">CSV To HTML</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-json-converter.html">CSV To JSON</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-csv-converter.html">XML To CSV</a>
+                  </li>
+                  <li>
+                    <a href="csv-To-tsv-converter.html">CSV To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-csv-converter.html">json To csv</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-html-converter.html">XML To HTML</a>
+                  </li>
+                  <li>
+                    <a href="xml-To-tsv-converter.html">XML To TSV</a>
+                  </li>
+                  <li>
+                    <a href="json-To-html-converter.html">JSON To HTML</a>
+                  </li>
+                  <ul>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Developers Tools</h4>
+                <ul>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="regexp-test.html">Regular Expression</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-mac-address.html">MAC Address</a>
+                  </li>
+                  <li>
+                    <a href="what-is-my-ip.html">IP Address</a>
+                  </li>
+                  <li>
+                    <a href="email-validation.html">Email Validation</a>
+                  </li>
+                  <li>
+                    <a href="hostname-to-ip.html">Hostname To Ip</a>
+                  </li>
+                  <li>
+                    <a href="ip-to-hostname.html">Ip To Hostname</a>
+                  </li>
+                  <li>
+                    <a href="delimited-text-extract.html">Delimited text extract</a>
+                  </li>
+                  <li>
+                    <a href="dns-lookup.html">DNS lookup</a>
+                  </li>
+                  <li>
+                    <a href="dns-mx-record.html">DNS mx record</a>
+                  </li>
+                  <li>
+                    <a href="get-ipinfo.html">Ip Information</a>
+                  </li>
+                  <li>
+                    <a href="google-system-local-font-picker.html">google font picker</a>
+                  </li>
+                  <li>
+                    <a href="open-port.html">Open Port</a>
+                  </li>
+                  <li>
+                    <a href="server-headers-check.html">Server Headers Check</a>
+                  </li>
+                  <li>
+                    <a href="playground.html">HTML, CSS, Javascript playground to test and share</a>
+                  </li>
+                  <li>
+                    <a href="api-tester.html">API Tester</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp.html">unix timestamp</a>
+                  </li>
+                  <li>
+                    <a href="json-editor.html">json editor tree</a>
+                  </li>
+                  <li>
+                    <a href="javascript-obfuscator.html">javascript obfuscator</a>
+                  </li>
+                  <li>
+                    <a href="image-editor.html">Image Editor</a>
+                  </li>
+                  <li>
+                    <a href="unix-timestamp-converter.html">Unix Timestamp Converter</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Validation Tools</h4>
+                <ul>
+                  <li>
+                    <a href="css-validation.html">CSS Validation</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-validator.html">Credit Card Vailidator</a>
+                  </li>
+                  <li>
+                    <a href="un-google-link.html">Un-Google Link</a>
+                  </li>
+                  <li>
+                    <a href="yaml-validator.html">YAML Validator</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Number Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="binary-to-decimal-converter.html">Binary To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-octal-converter.html">Binary To Octal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-hex-converter.html">Binary To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="binary-to-string-converter.html">Binary To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-binary-converter.html">String To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-binary-converter.html">Decimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-hex-converter.html">Decimal To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="decimal-to-octal-converter.html">Decimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-binary-converter.html">Hexadecimal To Binary</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-decimal-converter.html">Hexadecimal To Decimal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-octal-converter.html">Hexadecimal To Octal</a>
+                  </li>
+                  <li>
+                    <a href="hex-to-string-converter.html">Hexadecimal To String</a>
+                  </li>
+                  <li>
+                    <a href="string-to-hex-converter.html">String To Hexadecimal</a>
+                  </li>
+                  <li>
+                    <a href="octal-to-binary-converter.html">Octal To Binary</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Color Conversion Tools</h4>
+                <ul>
+                  <li>
+                    <a href="rgb-to-hex-converter.html">RGB To HEX</a>
+                  </li>
+                  <ul>
+                    <li>
+                      <a href="hex-to-rgb-converter.html">HEX To RGB</a>
+                    </li>
+                  </ul>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>String / Esacape/ Unescape</h4>
+                <ul>
+                  <li>
+                    <a href="word-count.html">Word To Count</a>
+                  </li>
+                  <li>
+                    <a href="html-escape.html">HTML To escape</a>
+                  </li>
+                  <li>
+                    <a href="html-unescape.html">HTML To unescape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-escape.html">Javascript To escape</a>
+                  </li>
+                  <li>
+                    <a href="javascript-unescape.html">Javascript To unescape</a>
+                  </li>
+                  <li>
+                    <a href="json-escape.html">JSON To escape</a>
+                  </li>
+                  <li>
+                    <a href="json-unescape.html">JSON To unescape</a>
+                  </li>
+                  <li>
+                    <a href="number-to-word-converter.html">Number To Word</a>
+                  </li>
+                  <li>
+                    <a href="xml-escape.html">xml escape</a>
+                  </li>
+                  <li>
+                    <a href="xml-unescape.html">xml unescape</a>
+                  </li>
+                  <li>
+                    <a href="strip-html.html">Strip HTML</a>
+                  </li>
+                  <li>
+                    <a href="strip-xml.html">Strip XML</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="footer-links">
+                <h4>Formater / Beautify / Minify</h4>
+                <ul>
+                  <li>
+                    <a href="html-formatter-beautifier.html">HTML Beautify</a>
+                  </li>
+                  <li>
+                    <a href="html-minify.html">HTML Minify</a>
+                  </li>
+                  <li>
+                    <a href="css-formatter-beautifier.html">CSS Beautify</a>
+                  </li>
+                  <li>
+                    <a href="css-minify.html">CSS Minify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-formatter-beautifier.html">Javascript Beautify</a>
+                  </li>
+                  <li>
+                    <a href="javascript-minify.html">Javascript Minify</a>
+                  </li>
+                  <li>
+                    <a href="php-formatter-beautifier.html">PHP Beautify</a>
+                  </li>
+                  <li>
+                    <a href="php-minify.html">PHP Minify</a>
+                  </li>
+                  <li>
+                    <a href="python-formatter-beautifier.html">Python Beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-formatter-beautifier.html">JSON beautify</a>
+                  </li>
+                  <li>
+                    <a href="json-minify.html">JSON minify</a>
+                  </li>
+                  <li>
+                    <a href="sql-formatter-beautifier.html">SQL beautify</a>
+                  </li>
+                  <li>
+                    <a href="xml-formatter-beautifier.html">XML beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-formatter-beautifier.html">C++ Beautify</a>
+                  </li>
+                  <li>
+                    <a href="cpp-minify.html">C++ Minify</a>
+                  </li>
+                  <li>
+                    <a href="c-formatter-beautifier.html">C Beautify</a>
+                  </li>
+                  <li>
+                    <a href="c-minify.html">C Minify</a>
+                  </li>
+                  <li>
+                    <a href="go-formatter-beautifier.html">Go Beautify</a>
+                  </li>
+                  <li>
+                    <a href="remove-duplicate-lines.html">Remove Duplicate Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-empty-lines.html">Remove Empty Lines</a>
+                  </li>
+                  <li>
+                    <a href="remove-extra-spaces.html">Remove Extra Spaces</a>
+                  </li>
+                  <li>
+                    <a href="remove-line-breaks.html">Remove Line Breaks</a>
+                  </li>
+                  <li>
+                    <a href="reverse-string.html">Reverse String</a>
+                  </li>
+                  <li>
+                    <a href="rot13-to-text-converter.html">ROT13 to Text Converter</a>
+                  </li>
+                  <li>
+                    <a href="sort-text-lines.html">Sort Text Lines</a>
+                  </li>
+                  <li>
+                    <a href="text-to-rot13-converter.html">Text to ROT13 Converter</a>
+                  </li>
+                  <li>
+                    <a href="upside-down-text.html">upside down text</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-accents.html">Online Remove Accents</a>
+                  </li>
+                  <li>
+                    <a href="online-remove-lines-containing.html">Online-Remove-Lines-Containing</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="footer-links">
+                <h4>Finance Tools</h4>
+                <ul>
+                  <li>
+                    <a href="emi-calculator.html">Home Loan</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Car Loan</a>
+                  </li>
+                  <li>
+                    <a href="credit-card-generate.html">Credit Card Generate</a>
+                  </li>
+                  <li>
+                    <a href="emi-calculator.html">Personal Loan</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="copyright">© Copyright
+          <strong>W3tools.CC</strong>. All Rights Reserved</div>
+        <div class="credits">Developed by W3tools.CC</div>
+      </div>
+    </footer>
+    <a href="javascript:;" class="back-to-top">
+      <i class="fa fa-chevron-up">
+      </i>
+    </a>
+    <script src="static/js/jquery.min.js">
+    </script>
+    <script src="static/js/bootstrap.bundle.min.js">
+    </script>
+    <script src="static/css/editor.css">
+    </script>
+    <script src="static/js/ace.js">
+    </script>
+    <script src="static/js/custom-tool.js">
+    </script>
+    <script src="static/js/jquery.creditCardValidator.js">
+    </script>
+    <script>var editor1 = ace.edit("editor1");
+      var editor2 = ace.edit("editor2");
+      $(document).ready(function(e) {});</script>
+    <script>function validate() {
+        var valid = true;
+        $(".demoInputBox").css('background-color', '');
+        var message = "";
+
+        var cardHolderNameRegex = /^[a-z ,.'-]+$/i;
+        var cvvRegex = /^[0-9]{3,3}$/;
+
+        var cardHolderName = $("#card-holder-name").val();
+        var cardNumber = $("#card-number").val();
+        var cvv = $("#cvv").val();
+
+        if (cardHolderName == "" || cardNumber == "" || cvv == "") {
+          message += "<div>All Fields are Required.</div>";
+          if (cardHolderName == "") {
+            $("#card-holder-name").css('background-color', '#FFFFDF');
+          }
+          if (cardNumber == "") {
+            $("#card-number").css('background-color', '#FFFFDF');
+          }
+          if (cvv == "") {
+            $("#cvv").css('background-color', '#FFFFDF');
+          }
+          valid = false;
+        }
+
+        if (cardHolderName != "" && !cardHolderNameRegex.test(cardHolderName)) {
+          message += "<div>Card Holder Name is Invalid</div>";
+          $("#card-holder-name").css('background-color', '#FFFFDF');
+          valid = false;
+        }
+
+        if (cardNumber != "") {
+          $('#card-number').validateCreditCard(function(result) {
+            if (! (result.valid)) {
+              message += "<div>Card Number is Invalid</div>";
+              $("#card-number").css('background-color', '#FFFFDF');
+              valid = false;
+            }
+          });
+        }
+
+        if (cvv != "" && !cvvRegex.test(cvv)) {
+          message += "<div>CVV is Invalid</div>";
+          $("#cvv").css('background-color', '#FFFFDF');
+          valid = false;
+        }
+
+        if (message != "") {
+          $("#success-message").hide();
+          $("#error-message").show();
+          $("#error-message").html(message);
+        }
+        if (valid) {
+          $("#error-message").hide();
+          $("#success-message").show();
+          $("#success-message").html('<h4>Vaild Card Number</h4>');
+          return false;
+        }
+        return valid;
+      }</script>
+  </body>
+
+</html>
